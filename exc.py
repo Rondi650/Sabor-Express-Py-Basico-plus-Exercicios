@@ -365,3 +365,42 @@ def verificacao_frequencia_palavras():
             contagem_palavras     
 
       print(contagem_palavras)
+      
+      
+def exercicios_extras_dicionario_palavras():
+      frase = 'O sol brilha brilha sem parar'
+      dicionario = {}
+      quebrar_frase = frase.split()
+      print(f'Antes do for {quebrar_frase}')
+      contador = 1
+            
+      for palavras in quebrar_frase:
+            print(f'Contador: {contador}')
+            contador += 1            
+            if palavras in dicionario:
+                  print(f'Dentro do for no if no loop: {palavras}')
+                  print(f'Dentro do for, no if no dicionario: {dicionario}')
+                  dicionario[palavras] += 1
+            else:
+                  dicionario[palavras] = 1
+                  print(f'Dentro do else no loop: {palavras}')
+                  print(f'Dentro do else no dicionario: {dicionario}')
+            
+      print(f'Saida final do programa: {dicionario}')
+      
+      # JS FAZENDO A MESMA COISA:
+      # let frase = 'O sol brilha brilha sem parar'
+      # let dicionario = {}
+      # let quebrar_frase = frase.split(" ")
+      # console.log(quebrar_frase)
+
+      # for (let palavra of quebrar_frase) {
+            # if (palavra in dicionario) {
+            #       dicionario[palavra] += 1
+            # } 
+            # else {
+            #       dicionario[palavra] = 1
+            #  }      
+      # }
+ 
+exercicios_extras_dicionario_palavras()
